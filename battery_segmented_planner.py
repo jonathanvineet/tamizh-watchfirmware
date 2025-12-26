@@ -134,10 +134,6 @@ def segmented_charge_planner(battery_capacity, initial_battery, tasks, charge_ra
     return round(total_time, 1)
 
 
-if __name__ == "__main__":
-    main()
-
-
 def main():
     """Main interactive loop"""
     print("╔═══════════════════════════════════════════════════════════════════════╗")
@@ -237,3 +233,7 @@ def run_examples():
     result = segmented_charge_planner(battery_capacity, initial_battery, tasks, charge_rate)
     status = "Feasible" if result > 0 else "Infeasible"
     print(f"Result: {result} ({status})\n")
+
+
+if __name__ == "__main__":
+    main()
